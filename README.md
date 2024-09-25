@@ -173,16 +173,23 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 
 
 ## STM 32 CUBE PROGRAM :
+```PY
+  Lcd_PortType ports[] = {GPIOA,GPIOA,GPIOA,GPIOA};
+  Lcd_PinType pins[] = {GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
+  Lcd_HandleTypeDef lcd;
+  lcd = Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
+  Lcd_cursor(&lcd, 0,0);
+  Lcd_string(&lcd, "DEPT scoft");
 
-
-
-
+  Lcd_cursor(&lcd, 1,0);
+  Lcd_string(&lcd, "Kesava");
+```
 ## Output screen shots of proteus  :
- 
- 
+ ![image](https://github.com/user-attachments/assets/3e574fe4-6286-4ea2-90d2-1b74d35844ab)
+
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- 
- 
+ ![image](https://github.com/user-attachments/assets/5cf4834d-f56a-41d6-9b5e-dc00f21d34ac)
+
 ## Result :
 Interfacing a lcd display with ARM microcontroller are simulated in proteus and the results are verified.
 
